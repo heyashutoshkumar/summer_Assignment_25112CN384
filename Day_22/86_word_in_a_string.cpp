@@ -21,5 +21,6 @@ int main() {
         }
     }
     cout << "Number of words: " << count;
+    
     return 0;
 }

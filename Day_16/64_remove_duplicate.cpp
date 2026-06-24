@@ -1,24 +1,25 @@
-//WAP to remove the duplicate from array.
 #include<iostream>
 using namespace std;
-int main(){
-    int size=0;
-    cout<<"Enter the size :"<<endl;
-    cin>>size;
-    int ar[size];
-    for(int i=0;i<size;i++){
-        cin>>ar[i];
+int main() {
+    int size;
+    cin >> size;
+    int arr[100];
+    for(int i = 0; i < size; i++) {
+        cin >> arr[i];
     }
-    for(int i=0;i<size;i++){
-        for(int j=i+1;j<size;j++){
-            if(ar[i]==ar[j]){
-                
-            }
+    int j = 0; 
+    for(int i = 1; i < size; i++) {
+        if(arr[i] != arr[j]) {
+            j++;
+            arr[j] = arr[i];
         }
     }
-    for(int i=0;i<size;i++){
-        cout<<ar[i];
+
+    int newSize = j + 1;
+
+    for(int i = 0; i < newSize; i++) {
+        cout << arr[i] << " ";
     }
-    
+
     return 0;
 }

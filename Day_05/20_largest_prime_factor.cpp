@@ -10,22 +10,22 @@ int main(){
     }
     if(n<0)
         n=-n;
-    for(int i=1;i<=n;i++){
-        int fac=0;
+    for(int i=2;i<=n;i++){
+        int prime=1;
+       
         if(n%i==0){
-            fac=i;
-        }
-        if(fac==2){
-            pfac=2;
-        }
-        else{
-
-            for(int j=2;j<fac;j++){
-                if(fac%j!=0){
-                    pfac=j;
-                }
+            int prime=1;
+            for(int j=2;j<i;j++){
+                if(i%j==0){
+                    prime=0;
+                    break;}
+            }
+            if(prime){
+                pfac=i;
             
-        }}
+            }
+        }
+        
     }   
     cout<<"Largest prime factor is:"<<pfac<<endl;
     return 0;

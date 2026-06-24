@@ -47,7 +47,7 @@ int main(){
             for(int j=0;j<i;j++){
                 if(a[i]==a[j]){
                     duplicate=true;
-
+                    break;
                 }
             }
             if(!duplicate)

@@ -4,11 +4,7 @@ using namespace std;
 int diagonalsum(int mat[100][100],int size){
     int dsum=0;
     for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-            if(i==j){
-                dsum+=mat[i][j];
-            }
-        }
+        dsum+=mat[i][i];
     }
     return dsum;
 }
