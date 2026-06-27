@@ -18,7 +18,7 @@ int main(){
     cin.getline(name,100);
     cout<<"Enter your age : "<<endl;
     cin>>age;
-    if(age<=0){
+    if(age<=0 || age>=120){
         cout<<"Invalid age!!"<<endl;
         return 0;
     }
